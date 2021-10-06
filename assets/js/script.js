@@ -13,8 +13,9 @@ var getBrews = function (brew) {
     // make a request to the url
     fetch(apiUrl).then(function (response) {
         response.json().then(function (data) {
+            getBrewImage(data, brew);  
             displayBrews(data, brew);
-            getBrewImage(data, brew);   
+ 
         });
     });
 };
@@ -54,7 +55,8 @@ for (var i = 0; i < brews.length; i++) {
     titleEl.classList.add("title-el");
 
     eachBrew = document.createElement("ul");
-    eachBrew.classList.add("ul-brew")
+    eachBrew.classList.add("ul-brew");
+    eachBrew.setAttribute("id", "number-" + i);
 
     var address = "Address: " + brews[i].street + " " + brews[i].city + " " + brews[i].state; 
 
@@ -79,7 +81,6 @@ for (var i = 0; i < brews.length; i++) {
   
     // append container to the dom
     brewContainerEl.appendChild(brewEl);
-
 
   }
 }
@@ -106,9 +107,9 @@ var getBrewImage = function(brews) {
 
 var displayImage = function(brews) {
   
-    var eachBrew = document.querySelector(".ul-brew");
-    var brewEl = document.querySelector(".each-brew");
-
+ for(i =0; i < 10; i++) {
+    eachBrew = document.getElementById("number-" + i);
+    console.log(eachBrew);
 
     var imgSrc = brews.images_results[1].original;
 
@@ -126,7 +127,7 @@ var displayImage = function(brews) {
 
     eachBrew.appendChild(imgEl);
   
-
+ }
 
 }
 
