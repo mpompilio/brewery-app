@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brewery Search</title>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css" integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+
+<body>
+    <header>
+
+            <a href="#" class="logo"><i class="fas-fa-untensils"></i>FoodDashAPP</a>
+
+            <!-- Nav bar -->
+            <nav class="navbar">
+                <a class="active" href="about.html">About US</a>
+                <a href="# Mission/Vision/Values"> Mission/Vision/Values</a>
+                <a href="# Contact Us"> Contact Us</a>
+            </nav>
+
+    </header>
+    <main class="container">
+        <div >
+            <div class="left-side">
+                <h3>Search By Brewery</h3>
+                <form id="user-form" class="pure-form">
+                  <label for="brewery">Brewery</label>
+                  <input name="brewery" id="brewery" type="text" autofocus="true"/>
+                  <button type="submit" class="pure-button">Get Brewery</button>
+                </form>
+              </div>
+        </div>
+      
+        <div>
+        <div class="right-side">
+            <h2>Showing Breweries for: <span id="brew-search-term"></span></h2>
+            <div id="brew-container" class="list-group">
+                
+            </div>
+            </div>
+        </div>
+      </main>
+
+
+<script src="./assets/js/script.js"></script>
+</body>
+
+</html>
